@@ -1,0 +1,91 @@
+
+.ui-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    height: calc(100% - 80px);
+}
+
+nav{
+    height: 80px;
+}
+
+/* start left-side nav */
+main .left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 30px;
+    width: 150px;
+    height: 100%;
+    background-image: url(../img/sidebar-bg.png);
+    background-color: #051E34;
+}
+
+main .left-side .left-side-top{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+main .left-side .left-side-top .left-side-item,
+main .left-side .left-side-bottom .left-side-item{
+    display: flex;
+}
+
+main .left-side .left-side-top i,
+main .left-side .left-side-bottom i{
+    color: white;
+    padding-right: 20px;
+}
+
+main .left-side .left-side-top .left-side-item .text.stats{
+    padding-left: 4px;
+}
+
+main .left-side a{
+    text-decoration: none;
+    color: white;
+}
+/* end left-side nav */
+
+.right-side{
+    width: calc(100% - 150px);
+}
+
+.right-side-top{
+    height: 100px;
+    background-color: #1B72E8;
+}
+
+/* start header */
+.right-side-top .__my-badge{
+    background-color: rgba(5, 30, 52, 0.2);
+}
+
+.boolean-text{
+    font-size: 1.5em;
+}
+
+.__my-badge{
+    font-size: 0.7em;
+}
+
+.student-text{
+    font-size: 0.8em;
+}
+
+.student-number{
+    font-size: 1.4em;
+}
+
+.student-add span{
+    font-size: 0.8em;
+}
+
+.right-side-center{
+    height: calc(100% - 100px);
+}

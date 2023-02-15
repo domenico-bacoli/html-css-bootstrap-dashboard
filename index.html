@@ -13,8 +13,137 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <div class="ui-container">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.svg" alt="boolean logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                    <form class="d-flex flex-grow-1" role="search">
+                      <input class="form-control" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+                    </form>
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><i class="fa-solid fa-bars"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><i class="fa-solid fa-question"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link" href="#">
+                            <i class="fa-solid fa-bell"></i>
+                          </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
     
-    
+            <section class="left-side">
+                <div class="left-side-top">
+                    <div class="left-side-item">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-house"></i>
+                        </div>
+                        <div class="text home">
+                           <a href="#">Home</a>
+                        </div>
+                    </div>
+                    <div class="left-side-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <div class="text stats">
+                           <a href="#">Stats</a>
+                        </div>
+                    </div>
+                    <div class="left-side-item">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-signal"></i>
+                        </div>
+                        <div class="text">
+                           <a href="#">Signals</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left-side-bottom">
+                    <div class="left-side-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="text">
+                           <a href="#">Admin</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="right-side">
+
+                <header class="right-side-top d-flex align-items-center text-white px-3">
+                    <div class="row d-flex align-items-center w-100 ">
+                        <div class="col-6">
+                            <div class="boolean">
+                                <span class="boolean-text">Boolean</span>                                
+                                <span class="badge __my-badge rounded-pill">Piano blaze</span>
+                            </div>
+
+                            <div style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item text-white p-0"><span class="badge __my-badge rounded-pill">3 app</span></li>
+                                  <li class="breadcrumb-item text-white"><span class="badge __my-badge rounded-pill">Boolean mobile app</span></li>
+                                  <li class="text-white px-1"><span class="badge __my-badge rounded-pill">Boolean web app</span></li>
+                                  <li class="text-white-px-1"><span class="badge __my-badge rounded-pill">Boolean blog app</span></li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-3 text-white d-flex-column">
+                            <div class="student-text">Studenti online negli ultimi 30 minuti</div>
+                            <div class="student-number fw-bold">125</div>
+                        </div>
+
+                        <div class="col-3 ">
+                            <div class="student-add text-white ps-5">
+                                <span>Nuovo Studente</span>
+                                <button class="btn btn-primary border-light bg-transparent ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="right-side-center">
+
+                </div>
+
+            </section>
+        </main>
+
+
+
+        
+    </div>
 
 
 
