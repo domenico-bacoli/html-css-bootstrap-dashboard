@@ -6,11 +6,28 @@
 
 main{
     display: flex;
-    height: calc(100% - 60px);
+    height: calc(100% - 55px);
 }
 
 nav{
-    height: 60px;
+    height: 55px;
+    width: 100%;
+}
+
+.nav-left img{
+    width: 90%;
+}
+
+.form-control{
+    background-color: #E5E5E5;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.fa-bell{
+    color: darkorange;
 }
 
 /* start left-side nav */
@@ -18,7 +35,7 @@ main .left-side{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 30px;
+    padding: 40px 0;
     width: 150px;
     height: 100%;
     background-image: url(../img/sidebar-bg.png);
@@ -28,34 +45,31 @@ main .left-side{
 main .left-side .left-side-top{
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
 }
 
 main .left-side .left-side-top .left-side-item,
 main .left-side .left-side-bottom .left-side-item{
     display: flex;
+    justify-content: center;
 }
 
 main .left-side .left-side-top i,
 main .left-side .left-side-bottom i{
     color: white;
-    padding-right: 20px;
-}
-
-main .left-side .left-side-top .left-side-item .text.stats{
-    padding-left: 4px;
+    margin-right: 16px;
 }
 
 main .left-side a{
     text-decoration: none;
     color: white;
 }
+
 /* end left-side nav */
 
 .right-side{
     width: calc(100% - 150px);
     background-color: #F8F9FA;
-    overflow: auto;
 }
 
 .right-side-top{
@@ -96,3 +110,34 @@ main .left-side a{
     width: 7%;
 }
 
+th, td{
+    font-size: 0.7em;
+}
+
+.card-header{
+    font-size: 1.2em;
+}
+
+.accordion-button, .accordion-body{
+    font-size: 12px;
+}
+
+.card-text{
+    font-size: 0.8em;
+}
+
+.list-group-item{
+    font-size: 0.7em;
+}
+
+.table>:not(caption)>*>* {
+    padding: 8px 0 2px;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 0;
+}
+
+.card-body a{
+    font-size: 0.8em;
+}
