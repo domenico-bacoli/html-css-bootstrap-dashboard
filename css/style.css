@@ -18,6 +18,10 @@ nav{
     width: 90%;
 }
 
+.nav-left img:last-child{
+    width: 50px;
+}
+
 .form-control{
     background-color: #E5E5E5;
 }
@@ -28,6 +32,10 @@ nav ul{
 
 .fa-bell{
     color: darkorange;
+}
+
+.dropdown-toggle:empty::after{
+    display: none;
 }
 
 input::placeholder{
@@ -53,13 +61,21 @@ main .left-side{
 main .left-side .left-side-top{
     display: flex;
     flex-direction: column;
-    gap: 14px;
 }
 
 main .left-side .left-side-top .left-side-item,
 main .left-side .left-side-bottom .left-side-item{
     display: flex;
-    padding: 0 20px;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.left-side-item:hover{
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .text{
@@ -97,10 +113,6 @@ main .left-side a{
 
 .boolean-text{
     font-size: 1.5em;
-}
-
-.__my-badge{
-    font-size: 0.6em;
 }
 
 .student-text{
@@ -144,15 +156,14 @@ td{
     font-size: 11px;
 }
 
-.card-text{
-    font-size: 0.6em;
-}
-
 .card-title{
     font-size: 0.8em;
 }
 
-.list-group-item{
+.list-group-item,
+.card-body a,
+.card-text,
+.__my-badge{
     font-size: 0.6em;
 }
 
@@ -164,21 +175,23 @@ td{
     border-radius: 0;
 }
 
-.card-body a{
-    font-size: 0.6em;
-}
-
 .my-breadcrumb .breadcrumb-item::before{
     color: white;
+}
+
+.offcanvas input, .input-group-text{
+    height: 35px;
+    background-color: white;
+}
+
+.form-check input{
+    height: 16px;
+    width: 16px;
 }
 
 @media screen and (max-width: 768px){
     .dis-no{
         display: none;
-    }
-
-    .ps-5{
-        padding-left: 12px!important;
     }
 
     .__boolean{
@@ -189,12 +202,23 @@ td{
     }
 
     .__student-add{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         padding-top: 6px;
         order: 0;
+    }
+
+    .offcanvas {
+        width: 100%!important;
+        overflow: auto;
     }
 }
 
 @media screen and (max-width: 991px){
+    .__my-container{
+        padding-left: 0;
+    }
     main .left-side{
         display: flex;
         align-items: center;

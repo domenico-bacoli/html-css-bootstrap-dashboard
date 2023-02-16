@@ -16,11 +16,12 @@
 
     <div class="ui-container">
 
-        <nav class="my-nav px-3 bg-body-tertiary">
-            <div class="d-flex justify-content-between align-items-center h-100">
+        <nav class="my-nav bg-body-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center h-100 __my-container">
                 
-                <div class="nav-left pe-1">
-                    <img src="img/logo.svg" alt="boolean logo">
+                <div class="nav-left">
+                    <img src="img/logo.svg" class="__not" alt="boolean logo">
+                    <img src="img/mobile-logo.png" class="__dis-not" alt="boolean mobile logo">
                 </div>
                 <div class="nav-center w-100">
                 <form class="d-flex align-items-center" role="search">
@@ -38,10 +39,16 @@
                         <li class="nav-item d-none d-lg-flex">
                             <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                         </li>
+
                         <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-bell"></i>
-                        </a>
+                            <div class="dropdown">
+                                    <i class="fa-solid fa-bell dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                  <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul> 
                 </div>
@@ -93,7 +100,7 @@
 
             <section class="right-side">
 
-                <header class="right-side-top d-flex justify-content-between align-items-center text-white py-1 px-3">
+                <header class="right-side-top d-flex justify-content-between align-items-center text-white py-1 px-3 w-100">
                     <div class="row d-flex align-items-center w-100">
                         <div class="col-md-6 col-sm-12 __boolean">
                             <div class="boolean">
@@ -117,12 +124,90 @@
                             <div class="student-number fw-bold">125</div>
                         </div>
 
-                        <div class="col-md-3 col-sm-12 __student-add ps-5">
+                        <div class="col-md-3 col-sm-12 __student-add d-flex justify-content-end">
                             <div class="student-add pb-3">
+
+                                <!-- OFFCANVAS -->
                                 <span class="student-text">Nuovo Studente</span>
-                                <button class="btn btn-primary border-light bg-transparent ms-2 py-1 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <button class="btn btn-primary border-light bg-transparent ms-2 py-1 px-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
+                                  
+                                  <div class="offcanvas offcanvas-end w-50 p-3" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasLabel">Inserisci un nuovo studente</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                      </div>
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                          <label for="inputEmail4" class="form-label">Nome</label>
+                                          <input type="email" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label for="inputPassword4" class="form-label">Cognome</label>
+                                          <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label for="inputAddress" class="form-label">Email</label>
+                                          <input type="text" class="form-control" id="inputAddress">
+                                        </div>
+                                        <div class="col-md-6">
+                                          <label for="inputAddress2" class="form-label">Password</label>
+                                          <input type="text" class="form-control" id="inputAddress2">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputAddress" class="form-label">Indirizzo Email
+                                            </address></label>
+                                            
+                                            <div class="input-group">
+                                                <div class="input-group-text">@</div>
+                                                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+                                              </div>
+                                          </div>
+
+                                          <div class="col-md-6">
+                                            <label for="inputAddress2" class="form-label">Password</label>
+                                            <input type="text" class="form-control" id="inputAddress2">
+                                          </div>
+                                          <div class="col-md-12">
+                                            <label for="inputAddress" class="form-label">Email</label>
+                                            <input type="text" class="form-control" id="inputAddress">
+                                          </div>
+                                        <div class="col-md-6">
+                                          <label for="inputCity" class="form-label">City</label>
+                                          <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label for="inputState" class="form-label">Stato</label>
+                                          <select id="inputState" class="form-select">
+                                            <option selected>Scegli...</option>
+                                            <option>...</option>
+                                          </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <label for="inputZip" class="form-label">CAP</label>
+                                          <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label for="formFile" class="form-label">Foto</label>
+                                            <input class="form-control" type="file" id="formFile">
+                                          </div>
+                                        <div class="col-12">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                              Seleziona per proseguire
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <div class="col-12">
+                                          <button type="submit" class="btn btn-primary">Salva</button>
+                                          <button type="submit" class="btn btn-warning">Svuota</button>
+                                        </div>
+                                      </form>
+                                  </div>
+
+                                <!-- END OFFCANVAS -->
                             </div>
                            
                         </div>
@@ -142,7 +227,7 @@
                                       Prossime classi
                                     </div>
                                     <div class="card-body py-2">
-                                        <table class="table">
+                                        <table class="table table-hover">
                                             <thead>
                                               <tr>
                                                 <th scope="col" class="w-auto">Nome</th>
@@ -158,7 +243,7 @@
                                                 <td class="dis-no">15 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image"></i>Classe 76</th>
@@ -172,42 +257,42 @@
                                                 <td class="dis-no">17 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td class="ps-0"><span class="badge text-bg-warning text-white">process</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 78</th>
                                                 <td class="dis-no">18 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 79</th>
                                                 <td class="dis-no">19 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-danger">failed</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 80</th>
                                                 <td class="dis-no">20 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 81</th>
                                                 <td class="dis-no">21 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-danger">failed</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid  me-2" alt="code image">Classe 82</th>
                                                 <td class="dis-no">22 Feb 2021</td>
                                                 <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-2 rounded-2"></i></td>
                                               </tr>
                                             </tbody>
                                           </table>
