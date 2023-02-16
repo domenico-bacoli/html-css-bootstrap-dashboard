@@ -46,7 +46,6 @@ input{
     height: 30px;
 }
 
-/* start left-side nav */
 main .left-side{
     display: flex;
     flex-direction: column;
@@ -96,7 +95,6 @@ main .left-side a{
     text-decoration: none;
     color: white;
 }
-/* end left-side nav */
 
 .right-side{
     width: calc(100% - 150px);
