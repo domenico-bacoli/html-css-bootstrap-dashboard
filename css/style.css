@@ -6,11 +6,11 @@
 
 main{
     display: flex;
-    height: calc(100% - 55px);
+    height: calc(100% - 50px);
 }
 
 nav{
-    height: 55px;
+    height: 50px;
     width: 100%;
 }
 
@@ -30,6 +30,14 @@ nav ul{
     color: darkorange;
 }
 
+input::placeholder{
+    font-size: 0.8em;
+}
+
+input{
+    height: 30px;
+}
+
 /* start left-side nav */
 main .left-side{
     display: flex;
@@ -45,39 +53,44 @@ main .left-side{
 main .left-side .left-side-top{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
 main .left-side .left-side-top .left-side-item,
 main .left-side .left-side-bottom .left-side-item{
     display: flex;
-    justify-content: center;
+    padding: 0 20px;
+}
+
+.text{
+    padding: 0 10px;
+}
+
+.stats{
+    padding-left: 14px;
 }
 
 main .left-side .left-side-top i,
 main .left-side .left-side-bottom i{
     color: white;
-    margin-right: 16px;
 }
 
 main .left-side a{
     text-decoration: none;
     color: white;
 }
-
 /* end left-side nav */
 
 .right-side{
     width: calc(100% - 150px);
     background-color: #F8F9FA;
+    overflow-y: auto;
 }
 
 .right-side-top{
-    height: 100px;
     background-color: #1B72E8;
 }
 
-/* start header */
 .right-side-top .__my-badge{
     background-color: rgba(5, 30, 52, 0.2);
 }
@@ -87,51 +100,64 @@ main .left-side a{
 }
 
 .__my-badge{
-    font-size: 0.7em;
+    font-size: 0.6em;
 }
 
 .student-text{
-    font-size: 0.8em;
+    font-size: 0.7em;
+}
+
+.btn-primary{
+    font-size: 0.9em;
 }
 
 .student-number{
     font-size: 1.4em;
 }
 
-.student-add span{
-    font-size: 0.8em;
-}
-
-.right-side-center{
-    height: calc(100% - 100px);
-}
-
 .img-fluid{
-    width: 7%;
+    width: 20px;
+}
+
+.my-th-width{
+    width: 80px;
+    text-align: center;
 }
 
 th, td{
     font-size: 0.7em;
 }
 
+td{
+    text-align: center;
+}
+
 .card-header{
     font-size: 1.2em;
 }
 
+.accordion-button{
+    padding: 8px 20px;
+}
+
 .accordion-button, .accordion-body{
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .card-text{
+    font-size: 0.6em;
+}
+
+.card-title{
     font-size: 0.8em;
 }
 
 .list-group-item{
-    font-size: 0.7em;
+    font-size: 0.6em;
 }
 
 .table>:not(caption)>*>* {
-    padding: 8px 0 2px;
+    padding: 12px 0 0;
 }
 
 .accordion-item:first-of-type .accordion-button {
@@ -139,5 +165,60 @@ th, td{
 }
 
 .card-body a{
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
+
+.my-breadcrumb .breadcrumb-item::before{
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+    .dis-no{
+        display: none;
+    }
+
+    .ps-5{
+        padding-left: 12px!important;
+    }
+
+    .__boolean{
+        order: 1;
+    }
+    .__online-student{
+        order: 2;
+    }
+
+    .__student-add{
+        padding-top: 6px;
+        order: 0;
+    }
+}
+
+@media screen and (max-width: 991px){
+    main .left-side{
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        width: 50px;
+    }
+
+    .right-side{
+    width: calc(100% - 50px);
+}
+
+    .text{
+        display: none;
+    }
+
+    .__not{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    .__dis-not{
+        display: none;
+    }
+}
+

@@ -16,21 +16,21 @@
 
     <div class="ui-container">
 
-        <nav class="my-nav px-3 pt-2 bg-body-tertiary">
-            <div class="d-flex justify-content-between align-items-center">
+        <nav class="my-nav px-3 bg-body-tertiary">
+            <div class="d-flex justify-content-between align-items-center h-100">
                 
                 <div class="nav-left pe-1">
                     <img src="img/logo.svg" alt="boolean logo">
                 </div>
                 <div class="nav-center w-100">
-                <form class="d-flex" role="search">
+                <form class="d-flex align-items-center" role="search">
                     <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
                   </form>
                 </div>
                 <div class="nav-right d-flex align-items-center">
-                    <ul class="d-flex gap-4 mb-0 ps-2">
+                    <ul class="d-flex gap-3 mb-0 ps-2">
                         <li class="nav-item d-none d-lg-flex">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-bars"></i></a>
+                        <a class="nav-link" href="#"><i class="bi bi-list-ul"></i></a>
                         </li>
                         <li class="nav-item d-none  d-lg-flex">
                         <a class="nav-link" href="#"><i class="bi bi-question-circle-fill"></i></a>
@@ -93,33 +93,34 @@
 
             <section class="right-side">
 
-                <header class="right-side-top d-flex align-items-center text-white px-3">
-                    <div class="row d-flex align-items-center w-100 ">
-                        <div class="col-6">
+                <header class="right-side-top d-flex justify-content-between align-items-center text-white py-1 px-3">
+                    <div class="row d-flex align-items-center w-100">
+                        <div class="col-md-6 col-sm-12 __boolean">
                             <div class="boolean">
                                 <span class="boolean-text">Boolean</span>                                
                                 <span class="badge __my-badge rounded-pill">Piano blaze</span>
                             </div>
 
                             <div style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
-                                <ol class="breadcrumb">
+                                <ol class="breadcrumb my-breadcrumb">
                                   <li class="breadcrumb-item text-white p-0"><span class="badge __my-badge rounded-pill">3 app</span></li>
-                                  <li class="breadcrumb-item text-white"><span class="badge __my-badge rounded-pill">Boolean mobile app</span></li>
-                                  <li class="text-white px-1"><span class="badge __my-badge rounded-pill">Boolean web app</span></li>
-                                  <li class="text-white-px-1"><span class="badge __my-badge rounded-pill">Boolean blog app</span></li>
+                                  <li class="breadcrumb-item text-white p-0 __dis-not"><span class="badge __my-badge rounded-pill">+</span></li>
+                                  <li class="breadcrumb-item text-white __not"><span class="badge __my-badge rounded-pill">Boolean mobile app</span></li>
+                                  <li class="text-white px-1 __not"><span class="badge __my-badge rounded-pill">Boolean web app</span></li>
+                                  <li class="text-white-px-1 __not"><span class="badge __my-badge rounded-pill">Boolean blog app</span></li>
                                 </ol>
                             </div>
                         </div>
 
-                        <div class="col-3 text-white d-flex-column">
+                        <div class="col-md-3 col-sm-12 text-white d-flex-column __online-student">
                             <div class="student-text">Studenti online negli ultimi 30 minuti</div>
                             <div class="student-number fw-bold">125</div>
                         </div>
 
-                        <div class="col-3 ">
-                            <div class="student-add text-white ps-5">
-                                <span>Nuovo Studente</span>
-                                <button class="btn btn-primary border-light bg-transparent ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <div class="col-md-3 col-sm-12 __student-add ps-5">
+                            <div class="student-add pb-3">
+                                <span class="student-text">Nuovo Studente</span>
+                                <button class="btn btn-primary border-light bg-transparent ms-2 py-1 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                             </div>
@@ -130,82 +131,83 @@
                 </header>
 
                 <div class="right-side-center">
-                    
+                    <div class="container-fluid">
+
                     
                         <div class="row">
 
-                            <div class="col-8 ps-4 pe-2 mt-3">
+                            <div class="col-lg-8 mt-3">
                                 <div class="card mb-3">
-                                    <div class="card-header">
+                                    <div class="card-header pt-1">
                                       Prossime classi
                                     </div>
                                     <div class="card-body py-2">
                                         <table class="table">
-                                            <thead class="prossime-classi-header px-4">
+                                            <thead>
                                               <tr>
-                                                <th scope="col" class="w-50">Nome</th>
-                                                <th scope="col">Data inizio</th>
-                                                <th scope="col">ROI</th>
-                                                <th scope="col">Stato</th>
-                                                <th scope="col">Azioni</th>
+                                                <th scope="col" class="w-auto">Nome</th>
+                                                <th scope="col" class="my-th-width dis-no">Data inizio</th>
+                                                <th scope="col" class="my-th-width dis-no">ROI</th>
+                                                <th scope="col" class="my-th-width">Stato</th>
+                                                <th scope="col" class="my-th-width">Azioni</th>
                                               </tr>
                                             </thead>
                                             <tbody>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 75</th>
-                                                <td>15 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">15 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image"></i>Classe 76</th>
-                                                <td>16 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">16 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 77</th>
-                                                <td>17 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">17 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td class="ps-0"><span class="badge text-bg-warning text-white">process</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 78</th>
-                                                <td>18 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">18 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 79</th>
-                                                <td>19 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">19 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-danger">failed</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 80</th>
-                                                <td>20 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">20 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid me-2" alt="code image">Classe 81</th>
-                                                <td>21 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">21 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-danger">failed</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 rounded-2"></i></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row"><img src="img/class-avatar.jpg" class="img-fluid  me-2" alt="code image">Classe 82</th>
-                                                <td>22 Feb 2021</td>
-                                                <td>20%</td>
+                                                <td class="dis-no">22 Feb 2021</td>
+                                                <td class="dis-no">20%</td>
                                                 <td><span class="badge text-bg-success">Done</span></td>
-                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-2 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-2 rounded-2"></i></td>
+                                                <td><i class="fa-sharp fa-solid fa-pen border border-dark p-1 me-1 rounded-2"></i><i class="fa-solid fa-trash border border-dark p-1 mb-1 rounded-2"></i></td>
                                               </tr>
                                             </tbody>
                                           </table>
@@ -213,7 +215,7 @@
                                 </div>
 
                                 <div class="card">
-                                    <div class="card-header">
+                                    <div class="card-header pt-1">
                                       F.A.Q.
                                     </div>
                                     <div class="card-body p-0">
@@ -256,10 +258,10 @@
 
                             </div>
 
-                            <div class="col-4 pe-4 ps-2 mt-3">
+                            <div class="col-lg-4 mt-3">
                                 
                                 <div class="card mb-3">
-                                    <div class="card-header">
+                                    <div class="card-header pt-1">
                                       Todo
                                     </div>
                                     <div class="card-body">
@@ -282,16 +284,16 @@
 
                                 <div class="card">
                                     <img src="img/stats.jpeg" class="card-img-top" alt="grafico utenti attivi">
-                                    <div class="card-body">
-                                      <h6 class="card-title">Utenti attivi</h6>
+                                    <div class="card-body pt-2">
+                                      <h6 class="card-title mb-1">Utenti attivi</h6>
                                       <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                      <li class="list-group-item">Gennaio: 1200</li>
-                                      <li class="list-group-item">Febbraio: 800</li>
-                                      <li class="list-group-item">Marzo: 1500</li>
+                                      <li class="list-group-item py-2">Gennaio: 1200</li>
+                                      <li class="list-group-item py-2">Febbraio: 800</li>
+                                      <li class="list-group-item py-2">Marzo: 1500</li>
                                     </ul>
-                                    <div class="card-body">
+                                    <div class="card-body py-1">
                                       <a href="#" class="card-link">Visualizza report approfondito</a>
                                     </div>
                                 </div>
